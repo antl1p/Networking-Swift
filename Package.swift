@@ -4,9 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "Networking",
+    name: "Networking-Swift",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v10),
+        .macOS(.v10_10),
+        .tvOS(.v9),
+        .watchOS(.v4)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
