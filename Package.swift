@@ -14,7 +14,7 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Networking",
+            name: "Networking-Swift",
             targets: ["NetworkingCore", "AlamofireAdapter", "URLSessionClientAdapter"]),
     ],
     dependencies: [
