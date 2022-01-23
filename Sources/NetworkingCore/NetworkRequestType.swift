@@ -1,6 +1,9 @@
+import Foundation
+
 public protocol NetworkRequestType {
-//    associatedtype ResponseType: Codable
-//    associatedtype ErrorType: Error
+    associatedtype ResponseType: Codable
     
-    var httpMethod: String { get }
+    var urlRequest: URLRequest { get }
+    
+    func parseResponse(data: Data?, urlResponse: URLResponse?, error: Error?) throws -> ResponseType
 }

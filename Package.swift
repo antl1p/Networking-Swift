@@ -14,7 +14,7 @@ let package = Package(
     products: [
         .library(
             name: "Networking-Swift",
-            targets: ["NetworkingCore", "URLSessionClientAdapter"]),
+            targets: ["NetworkingCore", "URLSessionAdapter"]),
     ],
     dependencies: [
     ],
@@ -22,14 +22,11 @@ let package = Package(
         .target(
             name: "NetworkingCore",
             dependencies: []),
-        .testTarget(
-            name: "NetworkingCoreTests",
-            dependencies: ["NetworkingCore"]),
         .target(
-            name: "URLSessionClientAdapter",
+            name: "URLSessionAdapter",
             dependencies: ["NetworkingCore"]),
         .testTarget(
-            name: "URLSessionClientAdapterTests",
-            dependencies: ["NetworkingCore", "URLSessionClientAdapter"]),
+            name: "URLSessionAdapterTests",
+            dependencies: ["NetworkingCore", "URLSessionAdapter"]),
     ]
 )

@@ -1,5 +1,8 @@
 import Foundation
 
 public protocol NetworkAdapterType {
-    func executeRequest(request: NetworkRequestType) throws
+    associatedtype DataTaskType
+    
+    func execute<T: NetworkRequestType>(request: T, completion: @escaping (Result<T.ResponseType, Error>) -> Void) throws -> DataTaskType
 }
+    
