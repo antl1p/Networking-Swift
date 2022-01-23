@@ -5,4 +5,3 @@ public protocol NetworkAdapterType {
     
     func execute<T: NetworkRequestType>(request: T, completion: @escaping (Result<T.ResponseType, Error>) -> Void) throws -> DataTaskType
 }
-    
